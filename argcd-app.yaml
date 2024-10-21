@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/xcompass/argocd-test-repo
+      targetRevision: HEAD
+      path: a
+    - repoURL: https://github.com/xcompass/argocd-test-repo
+      targetRevision: HEAD
+      path: b
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
