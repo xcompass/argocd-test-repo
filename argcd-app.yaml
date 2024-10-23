@@ -19,7 +19,7 @@ spec:
       #path: a
     - repoURL: https://github.com/xcompass/argocd-test-repo
       targetRevision: HEAD
-      path: b
+      path: a
   destination:
     server: https://kubernetes.default.svc
     namespace: default
