@@ -1,1 +1,3 @@
 nameOverride: my-test-nginx
+service:
+  type: ClusterIP
